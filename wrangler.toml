@@ -1,0 +1,15 @@
+# Configuración legacy para D1 (migraciones db:schema, db:migrate-*).
+# El deploy con OpenNext usa wrangler.jsonc (Worker + assets + D1).
+# Si existe wrangler.jsonc, Wrangler lo usa por defecto.
+name = "apoinments"
+compatibility_date = "2026-02-10"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "apoinments-db"
+database_id = "82a151f1-1efa-4979-a92c-7ab3474c2399"
+
+[observability]
+[observability.logs]
+enabled = true
+invocation_logs = true

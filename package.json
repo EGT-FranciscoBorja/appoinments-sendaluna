@@ -1,0 +1,46 @@
+{
+  "name": "apoinments",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "deploy:clean": "node -e \"const fs=require('fs'); ['.wrangler','.open-next'].forEach(d=>{try{fs.rmSync(d,{recursive:true});console.log('Removed',d)}catch(e){}})\" && opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "lint": "eslint",
+    "db:schema": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-schema.sql",
+    "db:migrate-availability": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-availability-migration.sql",
+    "db:migrate-notification-email": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-notification-email-migration.sql",
+    "db:migrate-availability-dates": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-availability-dates-migration.sql",
+    "db:migrate-capacity": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-capacity-migration.sql",
+    "db:migrate-owner-email": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-owner-email-migration.sql",
+    "db:migrate-location-timezone": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-event-location-timezone.sql",
+    "db:migrate-calendar-tokens": "wrangler d1 execute apoinments-db --remote --file=./scripts/calendar-tokens-migration.sql",
+    "db:migrate-booking-google-calendar-id": "wrangler d1 execute apoinments-db --remote --file=./scripts/appointments-booking-google-calendar-id-migration.sql"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "^1.16.4",
+    "jose": "^6.1.3",
+    "next": "16.1.6",
+    "next-auth": "^4.24.11",
+    "next-themes": "^0.4.6",
+    "nodemailer": "^7.0.13",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-phone-number-input": "^3.4.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.68.1"
+  }
+}

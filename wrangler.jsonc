@@ -1,0 +1,47 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "main": ".open-next/worker.js",
+  "name": "apoinments",
+  "compatibility_date": "2025-12-01",
+  "keep_names": false,
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "NEXT_PUBLIC_CLOUDFLARE_D1_DATABASE_ID": "82a151f1-1efa-4979-a92c-7ab3474c2399",
+    "NEXT_PUBLIC_CLOUDFLARE_API": "tvj7ZcjnXl1sznpeYPm0EC9oeVFcZJzmUXrLdxJd",
+    "NEXT_PUBLIC_CLOUDFLARE_ACCOUNT_ID": "732a2dddca7b75c183bc217f6b4e3914",
+    "NEXT_PUBLIC_CLOUDFLARE_API_TOKEN": "7JSflJ4YrZL5vKsc4Q-HO0g_c4DcnwUeTkwFo9Co",
+    "CLOUDFLARE_D1_DATABASE_ID": "82a151f1-1efa-4979-a92c-7ab3474c2399",
+    "CLOUDFLARE_API": "tvj7ZcjnXl1sznpeYPm0EC9oeVFcZJzmUXrLdxJd",
+    "CLOUDFLARE_ACCOUNT_ID": "732a2dddca7b75c183bc217f6b4e3914",
+    "CLOUDFLARE_API_TOKEN": "7JSflJ4YrZL5vKsc4Q-HO0g_c4DcnwUeTkwFo9Co",
+    "CLOUDFLARE_REVIEWS_DB_ID": "ce20c6a5-8512-4b81-a334-aec49321854b",
+    "NEXTAUTH_URL": "https://appointments.responsibletravelsa.com",
+    "NEXTAUTH_SECRET": "+sgYCJ7MgaP/r6uIgXuFZXq6vX5Gu+hrppJ8FelQwOo=",
+    "GOOGLE_CLIENT_ID": "",
+    "GOOGLE_CLIENT_SECRET": "",
+    "RESEND_API_KEY": "re_ZMdY8Zn1_PAt93MieogZoB3LeG8bxwTM6",
+    "RESEND_FROM": "Appointments <info@responsibletravelsa.com>",
+    "MAIL_MAILER": "smtp",
+    "MAIL_SCHEME": "false",
+    "MAIL_HOST": "in-v3.mailjet.com",
+    "MAIL_PORT": "587",
+    "MAIL_ENCRYPTION": "tls",
+    "MAIL_USERNAME": "961e1952273120da0463d482cbcae2a3",
+    "MAIL_PASSWORD": "d6ac742a207405c553dc1fbdb06c2f51",
+    "MAIL_FROM_ADDRESS": "info@responsibletravelsa.com"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "apoinments-db",
+      "database_id": "82a151f1-1efa-4979-a92c-7ab3474c2399"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
