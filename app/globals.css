@@ -1,21 +1,46 @@
 @import "tailwindcss";
 
+/* Sendaluna palette: Black, Brown, Green 2, Almond, White, #222222, #000000 20% */
 :root {
-  /* Palette: 1 background, 2 text (light bg), 3 left panel (calendar) */
-  --background: #FDFFF3;
-  --foreground: #292d19;
-  /* Brand color family */
-  --brand-blue: #292d19;
-  --brand-blue-hover: #3d4225;
-  --brand-green: #A5C750;
-  --brand-green-light: #e8f0d4;
-  --brand-olive: #626420;
-  --brand-olive-hover: #52561b;
+  /* Raw palette */
+  --palette-black: #000000;
+  --palette-brown: #5c4033;
+  --palette-green2: #4a5d23;
+  --palette-almond: #EADDCA;
+  --palette-white: #FFFFFF;
+  --palette-dark: #222222;
+  --palette-overlay: rgba(0, 0, 0, 0.2);
+
+  /* Light theme */
+  --background: var(--palette-almond);
+  --foreground: var(--palette-dark);
+  --card: var(--palette-white);
+  --card-foreground: var(--palette-dark);
+  --muted: #6b5344;
+  --muted-foreground: #5c4033;
+  --border: var(--palette-overlay);
+  --input: var(--palette-overlay);
+  --ring: var(--palette-brown);
+
+  /* Brand (light): Brown + Green 2 */
+  --brand-blue: var(--palette-brown);
+  --brand-blue-hover: #4a3529;
+  --brand-green: var(--palette-green2);
+  --brand-green-light: #e8ebe0;
+  --brand-olive: var(--palette-green2);
+  --brand-olive-hover: #3d4e1c;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
   --color-brand-blue: var(--brand-blue);
   --color-brand-blue-hover: var(--brand-blue-hover);
   --color-brand-green: var(--brand-green);
@@ -27,9 +52,23 @@
 }
 
 .dark {
-  --background: #0a0a0a;
-  --foreground: #ffffff;
-  --muted: #d4d4d8;
+  /* Dark theme: #222 base, White text, Almond/Brown accents */
+  --background: var(--palette-dark);
+  --foreground: var(--palette-white);
+  --card: #2d2d2d;
+  --card-foreground: var(--palette-white);
+  --muted: var(--palette-almond);
+  --muted-foreground: #c9bfb5;
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.08);
+  --ring: var(--palette-almond);
+
+  --brand-blue: var(--palette-almond);
+  --brand-blue-hover: #f5efe6;
+  --brand-green: #6b8e3d;
+  --brand-green-light: rgba(74, 93, 35, 0.35);
+  --brand-olive: #6b8e3d;
+  --brand-olive-hover: #7a9e45;
 }
 
 body {

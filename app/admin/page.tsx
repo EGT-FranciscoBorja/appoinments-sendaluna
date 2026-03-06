@@ -27,10 +27,10 @@ export default async function AdminPage() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             {session?.user?.email && (
-              <span className="text-sm text-foreground/70 dark:text-slate-300">{session.user.email}</span>
+              <span className="text-sm text-muted-foreground">{session.user.email}</span>
             )}
             <SignOutButton />
-            <Link href="/" className="text-sm text-foreground/70 hover:text-foreground dark:text-slate-300 dark:hover:text-white">
+            <Link href="/" className="text-sm text-muted-foreground hover:text-foreground">
               ← Back to booking
             </Link>
           </div>

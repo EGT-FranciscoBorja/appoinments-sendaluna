@@ -7,7 +7,7 @@ export default function SignInButton() {
     <button
       type="button"
       onClick={() => signIn('google', { callbackUrl: '/admin' })}
-      className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-slate-200 hover:bg-slate-50 font-medium text-slate-800 dark:bg-slate-700 dark:border-slate-500 dark:text-white dark:hover:bg-slate-600 dark:hover:border-slate-400"
+      className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl border border-border hover:bg-muted/30 font-medium text-foreground"
     >
       <svg className="w-5 h-5" viewBox="0 0 24 24">
         <path

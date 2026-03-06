@@ -184,7 +184,7 @@ export default function AppointmentsClient() {
 
   if (loading) {
     return (
-      <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 p-10 text-center text-slate-600 dark:text-slate-300">
+      <div className="rounded-2xl bg-card shadow-sm border border-border p-10 text-center text-slate-600 dark:text-slate-300">
         Loading appointment types…
       </div>
     );
@@ -192,7 +192,7 @@ export default function AppointmentsClient() {
 
   if (events.length === 0) {
     return (
-      <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 p-10 text-center">
+      <div className="rounded-2xl bg-card shadow-sm border border-border p-10 text-center">
         <h2 className="text-xl font-semibold text-slate-900 dark:text-white mb-2">Book an appointment</h2>
         <p className="text-slate-700 dark:text-slate-200 mb-6">No appointment types available at the moment.</p>
         <a href="/admin" className="inline-flex items-center gap-2 rounded-xl bg-brand-olive px-4 py-2.5 text-white text-sm font-medium hover:bg-brand-olive-hover">
@@ -204,7 +204,7 @@ export default function AppointmentsClient() {
 
   if (step === 'confirmed' && bookingId) {
     return (
-      <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 p-10 text-center">
+      <div className="rounded-2xl bg-card shadow-sm border border-border p-10 text-center">
         <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
           <svg className="w-9 h-9 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -235,7 +235,7 @@ export default function AppointmentsClient() {
   const isDetailsStep = step === 'details';
 
   return (
-    <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 overflow-hidden">
+    <div className="rounded-2xl bg-card shadow-sm border border-border overflow-hidden">
       {/* Indicador de progreso */}
       {(isScheduleStep || isDetailsStep) && (
         <div className="px-6 pt-6 pb-2 border-b border-slate-100 dark:border-slate-600">

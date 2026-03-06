@@ -166,7 +166,7 @@ export default function AppointmentsBySlugClient({ initialEvent }: AppointmentsB
 
   if (step === 'confirmed' && bookingId) {
     return (
-      <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 p-10 text-center">
+      <div className="rounded-2xl bg-card shadow-sm border border-border p-10 text-center">
         <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
           <svg className="w-9 h-9 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -184,7 +184,7 @@ export default function AppointmentsBySlugClient({ initialEvent }: AppointmentsB
   const isDetailsStep = step === 'details';
 
   return (
-    <div className="rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-200 dark:border-slate-600 overflow-hidden">
+    <div className="rounded-2xl bg-card shadow-sm border border-border overflow-hidden">
       {/* Progress indicator */}
       {(isScheduleStep || isDetailsStep) && (
         <div className="px-6 pt-6 pb-2 border-b border-slate-100 dark:border-slate-600">
