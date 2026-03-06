@@ -2,6 +2,9 @@ import { getToken } from 'next-auth/jwt';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+/** Edge runtime required for OpenNext/Cloudflare (Node.js proxy not supported). */
+export const runtime = 'edge';
+
 export async function proxy(req: NextRequest) {
   if (req.nextUrl.pathname === '/admin/login') {
     return NextResponse.next();
