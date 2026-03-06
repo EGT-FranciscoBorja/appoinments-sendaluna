@@ -20,4 +20,7 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-initOpenNextCloudflareForDev();
+// Solo en desarrollo local / Cloudflare. En Vercel no cargar workerd (evita GLIBC_2.35).
+if (process.env.VERCEL !== '1') {
+  initOpenNextCloudflareForDev();
+}

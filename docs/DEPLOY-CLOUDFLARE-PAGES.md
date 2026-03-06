@@ -37,6 +37,12 @@ Si prefieres solo front estático (sin API en Cloudflare), ver **Opción B** má
 
 ## Errores frecuentes
 
+### Build en Vercel: `workerd: GLIBC_2.35 not found` / `EPIPE`
+
+Este proyecto está pensado para **Cloudflare** (D1, Workers, OpenNext). Si conectas el repo a **Vercel**, el build puede fallar porque el binario `workerd` de Cloudflare requiere una glibc más nueva que la del entorno de Vercel.
+
+**Solución:** Despliega en **Cloudflare Pages**, no en Vercel. En Cloudflare Dashboard → Workers & Pages → Connect to Git → elige este repo y usa los comandos de build/deploy de la sección anterior. Si usas Vercel por otro motivo, el build está condicionado (`next.config.ts`) para no cargar OpenNext cuando `VERCEL=1`, pero la app no podrá usar D1/Workers en Vercel.
+
 ### "assets.directory does not exist" / "wrangler deploy"
 
 Si el deploy falla con errores de `assets.directory` o `wrangler deploy`:
