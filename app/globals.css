@@ -1,11 +1,10 @@
 @import "tailwindcss";
 
-/* Sendaluna palette: Black, Brown, Green 2, Almond, White, #222222, #000000 20% */
+/* Sendaluna palette: Black, Brown, Almond, White, #222222, #000000 20% (sin verde) */
 :root {
   /* Raw palette */
   --palette-black: #000000;
   --palette-brown: #5c4033;
-  --palette-green2: #4a5d23;
   --palette-almond: #EADDCA;
   --palette-white: #FFFFFF;
   --palette-dark: #222222;
@@ -22,13 +21,13 @@
   --input: var(--palette-overlay);
   --ring: var(--palette-brown);
 
-  /* Brand (light): Brown + Green 2 */
+  /* Brand (light): solo Brown / Almond, sin verde */
   --brand-blue: var(--palette-brown);
   --brand-blue-hover: #4a3529;
-  --brand-green: var(--palette-green2);
-  --brand-green-light: #e8ebe0;
-  --brand-olive: var(--palette-green2);
-  --brand-olive-hover: #3d4e1c;
+  --brand-green: var(--palette-brown);
+  --brand-green-light: #f0e6dc;
+  --brand-olive: var(--palette-brown);
+  --brand-olive-hover: #4a3529;
 }
 
 @theme inline {
@@ -65,10 +64,10 @@
 
   --brand-blue: var(--palette-almond);
   --brand-blue-hover: #f5efe6;
-  --brand-green: #6b8e3d;
-  --brand-green-light: rgba(74, 93, 35, 0.35);
-  --brand-olive: #6b8e3d;
-  --brand-olive-hover: #7a9e45;
+  --brand-green: var(--palette-almond);
+  --brand-green-light: rgba(92, 64, 51, 0.2);
+  --brand-olive: #3d2e26;
+  --brand-olive-hover: #4a3529;
 }
 
 body {

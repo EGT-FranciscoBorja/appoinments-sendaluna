@@ -205,7 +205,7 @@ export default function AppointmentsClient() {
   if (step === 'confirmed' && bookingId) {
     return (
       <div className="rounded-2xl bg-card shadow-sm border border-border p-10 text-center">
-        <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center mx-auto mb-4">
+        <div className="w-16 h-16 rounded-full bg-brand-green-light dark:bg-brand-blue/20 flex items-center justify-center mx-auto mb-4">
           <svg className="w-9 h-9 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>

@@ -741,7 +741,7 @@ export default function AppointmentsAdminClient() {
                         aria-label="Copy link"
                       >
                         {copyFeedbackId === ev.id ? (
-                          <span className="text-xs text-green-600">Copied!</span>
+                          <span className="text-xs text-foreground">Copied!</span>
                         ) : (
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
