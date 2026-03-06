@@ -3,8 +3,8 @@ import Image from 'next/image';
 import { BRAND_LOGO_URL } from '@/lib/constants';
 
 export const metadata = {
-  title: 'Privacy policy | Responsible Travel Appointments',
-  description: 'Privacy policy for the Responsible Travel appointment booking service, including how we use and share Google user data.',
+  title: 'Privacy policy | Sendaluna Appointments',
+  description: 'Privacy policy for the Sendaluna appointment booking service, including how we use and share Google user data.',
 };
 
 export default function PrivacyPolicyPage() {
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
           <div className="flex items-center gap-3">
             <Image
               src={BRAND_LOGO_URL}
-              alt="Responsible Travel"
+              alt="Sendaluna"
               width={80}
               height={80}
               className="rounded-md object-contain"
@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
 
         <div className="prose prose-slate dark:prose-invert max-w-none mt-8 text-foreground/90">
           <p className="text-sm leading-relaxed mb-6">
-            This privacy policy applies to the <strong>Responsible Travel appointment booking service</strong> at appointments.responsibletravelsa.com. It describes how we collect, use, and disclose information, including data obtained through Google sign-in and Google Calendar.
+            This privacy policy applies to the <strong>Sendaluna appointment booking service</strong> at appointments.responsibletravelsa.com. It describes how we collect, use, and disclose information, including data obtained through Google sign-in and Google Calendar.
           </p>
 
           <h2 className="text-base font-semibold text-foreground mt-6 mb-2">Information we collect</h2>
@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
 
           <h2 className="text-base font-semibold text-foreground mt-6 mb-2">Contact</h2>
           <p className="text-sm leading-relaxed mb-6">
-            For questions about this policy or your data, contact Responsible Travel via the main site at{' '}
+            For questions about this policy or your data, contact Sendaluna via the main site at{' '}
             <a href="https://responsibletravelsa.com" target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2">responsibletravelsa.com</a>.
           </p>
         </div>

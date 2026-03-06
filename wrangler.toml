@@ -6,8 +6,8 @@ compatibility_date = "2026-02-10"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "apoinments-db"
-database_id = "82a151f1-1efa-4979-a92c-7ab3474c2399"
+database_name = "apointments-sendaluna"
+database_id = "f3fb19d6-4b02-4ded-93a8-002db1697ddc"
 
 [observability]
 [observability.logs]

@@ -49,7 +49,7 @@ function wrapEmailBody(content: string): string {
 
 const EMAIL_LOGO_HTML = `
   <div style="text-align:center; margin-bottom:28px;">
-    <img src="${BRAND_LOGO_URL}" alt="Responsible Travel" width="120" height="120" style="display:inline-block; width:80px; height:80px; object-fit:contain;" />
+    <img src="${BRAND_LOGO_URL}" alt="Sendaluna" width="120" height="120" style="display:inline-block; width:80px; height:80px; object-fit:contain;" />
   </div>
 `;
 
@@ -80,8 +80,9 @@ function getFromAddress(): string {
 }
 
 function getTransporter(): nodemailer.Transporter | null {
-  const user = process.env.MAIL_USERNAME?.trim();
-  const pass = process.env.MAIL_PASSWORD?.trim();
+  // Mailjet SMTP: user = API Key, pass = Secret Key (vars MAILJET_* o MAIL_USERNAME/MAIL_PASSWORD)
+  const user = process.env.MAIL_USERNAME?.trim() || process.env.MAILJET_API_KEY?.trim();
+  const pass = process.env.MAIL_PASSWORD?.trim() || process.env.MAILJET_SECRET_KEY?.trim();
   if (!user || !pass) return null;
   const host = process.env.MAIL_HOST?.trim() || 'in-v3.mailjet.com';
   const port = parseInt(process.env.MAIL_PORT ?? '587', 10) || 587;
@@ -108,7 +109,7 @@ export async function sendBookingNotification(params: {
 }): Promise<boolean> {
   const transporter = getTransporter();
   if (!transporter) {
-    console.error('[Mailjet] Email not sent: MAIL_USERNAME and MAIL_PASSWORD must be set in .env.local. Restart the server after adding them.');
+    console.error('[Mailjet] Email not sent: set MAILJET_API_KEY and MAILJET_SECRET_KEY (or MAIL_USERNAME and MAIL_PASSWORD) in wrangler vars or .env.local.');
     return false;
   }
 

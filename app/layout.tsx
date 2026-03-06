@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Book an appointment | Responsible Travel",
-  description: "Responsible Travel appointment booking service. Book meetings, consultations or event slots. Administrators use Google sign-in and optional Google Calendar sync to manage events and see bookings in their calendar.",
+  title: "Book an appointment | Sendaluna",
+  description: "Sendaluna appointment booking service. Book meetings, consultations or event slots. Administrators use Google sign-in and optional Google Calendar sync to manage events and see bookings in their calendar.",
   verification: {
     google: "TUgY0U4d59QYlSH0RCajsuVHHZfhCWCVIZ6DPrGxf48",
   },

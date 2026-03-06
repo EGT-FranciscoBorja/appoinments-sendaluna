@@ -23,7 +23,7 @@ export default async function AppointmentBySlugPage({ params }: PageProps) {
           <div className="flex items-center gap-3">
             <Image
               src={BRAND_LOGO_URL}
-              alt="Responsible Travel"
+              alt="Sendaluna"
               width={120}
               height={120}
               className="rounded-md object-contain"

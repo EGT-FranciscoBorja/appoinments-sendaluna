@@ -23,22 +23,21 @@
     "NEXTAUTH_SECRET": "+sgYCJ7MgaP/r6uIgXuFZXq6vX5Gu+hrppJ8FelQwOo=",
     "GOOGLE_CLIENT_ID": "",
     "GOOGLE_CLIENT_SECRET": "",
-    "RESEND_API_KEY": "re_ZMdY8Zn1_PAt93MieogZoB3LeG8bxwTM6",
-    "RESEND_FROM": "Appointments <info@responsibletravelsa.com>",
+    "MAILJET_API_KEY": "5f0b3f10f7cb748266c0f706db3b9af6",
+    "MAILJET_SECRET_KEY": "3b83fe8dad8c625cabc2c622815ef1a4",
+    "MAIL_FROM_ADDRESS": "info@sendaluna.com",
+    "MAIL_FROM_NAME": "Appointments",
     "MAIL_MAILER": "smtp",
     "MAIL_SCHEME": "false",
     "MAIL_HOST": "in-v3.mailjet.com",
     "MAIL_PORT": "587",
     "MAIL_ENCRYPTION": "tls",
-    "MAIL_USERNAME": "961e1952273120da0463d482cbcae2a3",
-    "MAIL_PASSWORD": "d6ac742a207405c553dc1fbdb06c2f51",
-    "MAIL_FROM_ADDRESS": "info@responsibletravelsa.com"
   },
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "apoinments-db",
-      "database_id": "82a151f1-1efa-4979-a92c-7ab3474c2399"
+      "database_name": "apointments-sendaluna",
+      "database_id": "f3fb19d6-4b02-4ded-93a8-002db1697ddc"
     }
   ],
   "observability": {
